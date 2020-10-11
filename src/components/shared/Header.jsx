@@ -23,9 +23,9 @@ const Header = ({ title }) => (
       position: 'relative',
       top: '-1.4em',
       color: Primary,
-      opacity: 0.6,
+      opacity: 0.3,
       fontSize: '100px',
-      zIndex: '-1',
+      zIndex: '0',
       fontFamily: 'Montserrat, sans-serif',
       fontWeight: 800,
     }}
