@@ -25,10 +25,10 @@ const ProjectsContainer = styled.div`
 `;
 
 const Projects = () => (
-  <Container>
+  <Container id="projects">
     <Header title="Projects" />
     <ProjectsContainer>
-      {projects.map((card) => <ProjectCard card={card} />)}
+      {projects.map((card) => <ProjectCard card={card} key={card.id} />)}
     </ProjectsContainer>
   </Container>
 );

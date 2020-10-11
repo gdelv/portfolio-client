@@ -1,12 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Primary } from '../../colors';
+import { Primary, White } from '../../colors';
 
 const StyledButton = styled.button`
     background: ${Primary};
-    color: white;
+    color: ${White};
     outline: none;
     padding: 10px 15px;
+    font-weight: 800;
     border-radius: 5px;
     position: relative;
     cursor: pointer;
@@ -15,6 +16,12 @@ const StyledButton = styled.button`
     display: block;
     border: 2px solid black;
     font-family: 'Montserrat', sans-serif;
+    &:hover {
+      color: ${Primary};
+      background: ${White};
+      transform: scale(1.1);
+      transition: all 1s ease;
+    }
 
 `;
 

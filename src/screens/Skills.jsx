@@ -6,7 +6,7 @@ import Header from '../components/shared/Header';
 import { languages } from '../data';
 
 const Skills = () => (
-  <Container>
+  <Container id="skills">
     <Header title="Skills" />
     {/* Grid Component */}
     <Grid cardsArr={languages} />

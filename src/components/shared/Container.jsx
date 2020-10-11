@@ -11,8 +11,8 @@ const MainContainer = styled.div`
     align-items: center;
     background: ${White};
 `;
-const Container = ({ children }) => (
-  <MainContainer>{children}</MainContainer>
+const Container = ({ children, id }) => (
+  <MainContainer id={id}>{children}</MainContainer>
 );
 
 export default Container;

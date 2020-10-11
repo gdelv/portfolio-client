@@ -296,7 +296,7 @@ export const projects = [
   {
     id: 6,
     title: 'Meal Prep',
-    description: 'Built with a team of 2 UX/UI designers and 2 other software engineers, a website where a user can browse through meals per different weeks and choose which they would like delivered.',
+    description: 'A website where a user can browse through meals per different weeks and choose which they would like delivered.',
     img: mealGif,
     webLink: 'http://mealprep.surge.sh/',
     repoLink: 'https://github.com/gdelv/CollabProject',

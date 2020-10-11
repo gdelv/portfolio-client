@@ -23,7 +23,7 @@ border-radius: 5px;
 `;
 
 const About = () => (
-  <Container>
+  <Container id="about">
     <Header title="About" />
     <AboutImage src={profile} alt="profile" />
     <AboutContainer>

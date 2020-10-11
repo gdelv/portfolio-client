@@ -1,14 +1,8 @@
 import React, { useState } from 'react';
-import styled, { keyframes } from 'styled-components';
-import { merge, tada, flip } from 'react-animations';
+import styled from 'styled-components';
 import logo from '../../images/gIcon.png';
 import Hamburger from './Hamburger';
-import Title from './Title';
 import { Primary } from '../../colors';
-
-const tadaFlip = merge(flip, tada);
-
-const bounceModal = keyframes`${tadaFlip}`;
 
 const StyledNav = styled.nav`
     max-width: 100%;
@@ -19,7 +13,7 @@ const StyledNav = styled.nav`
     padding: 0 1em;
 `;
 const LogoImg = styled.img`
-    width: 100px;
+    width: 80px;
     position: relative;
     top: 2vh;
     height: 6vh;
@@ -39,7 +33,16 @@ const StyledModal = styled.div`
   z-index: 9999;
   overflow: hidden;
   border-top: .1px solid darkgray;
-  animation: ${bounceModal} 1.5s linear .3s 1 forwards;
+`;
+const StyledLink = styled.a`
+  text-decoration: none;
+  color: white;
+  font-size: 2rem;
+  font-family: 'Roboto', sans-serif;
+  &:hover {
+    color: ${Primary};
+    transition: color .25s ease;
+  }
 `;
 const NavBar = () => {
   const [buttonClassName, setButtonClassName] = useState('circle icon');
@@ -52,9 +55,9 @@ const NavBar = () => {
 
   const renderMainLinks = () => (
     <StyledNav>
-      <div>
+      <a href="#home">
         <LogoImg src={logo} />
-      </div>
+      </a>
       <Hamburger
         buttonClassName={buttonClassName}
         handleModal={handleModal}
@@ -66,10 +69,10 @@ const NavBar = () => {
     if (modal) {
       return (
         <StyledModal>
-          <Title title="About" />
-          <Title title="Skills" />
-          <Title title="Projects" />
-          <Title title="Contact" />
+          <StyledLink href="#about" onClick={handleModal}>About</StyledLink>
+          <StyledLink href="#skills" onClick={handleModal}>Skills</StyledLink>
+          <StyledLink href="#projects" onClick={handleModal}>Projects</StyledLink>
+          <StyledLink href="#contact" onClick={handleModal}>Contact</StyledLink>
         </StyledModal>
       );
     }
