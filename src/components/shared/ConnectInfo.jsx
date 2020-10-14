@@ -4,6 +4,7 @@ import { Primary } from '../../colors';
 
 const StyledHeroSocial = styled.div`
     width: 90%;
+    height: 140px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
