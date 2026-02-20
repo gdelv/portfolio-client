@@ -25,7 +25,7 @@ export default function HeroSection() {
         <div className="mt-6 flex items-center gap-4 reveal-left" style={{ transitionDelay: '0.2s' }}>
           <div className="w-10 h-[2px] bg-red-500" />
           <p className="text-white/60 text-lg">
-            software engineer
+            Senior Full-Stack Engineer
           </p>
         </div>
         <p className="mt-4 text-white/40 text-sm tracking-widest reveal-left" style={{ transitionDelay: '0.3s' }}>

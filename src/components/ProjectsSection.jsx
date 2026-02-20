@@ -8,7 +8,7 @@ export default function ProjectsSection() {
         className="absolute bottom-8 right-8 md:right-16 text-[8rem] md:text-[12rem] font-bold leading-none text-white/[0.03] select-none"
         style={{ fontFamily: 'Space Grotesk, sans-serif' }}
       >
-        01
+        02
       </div>
 
       {/* Title */}
@@ -39,7 +39,7 @@ export default function ProjectsSection() {
               </h3>
               <span className="ml-auto text-white/20 group-hover:text-white/50 transition-colors text-sm">&rarr;</span>
             </div>
-            <p className="text-white/35 text-sm leading-snug mb-2 line-clamp-1">{project.description}</p>
+            <p className="text-white/35 text-sm leading-snug mb-2">{project.description}</p>
             <div className="flex flex-wrap gap-1.5">
               {project.tech.map((t) => (
                 <span key={t} className="text-[10px] px-2 py-0.5 rounded-full bg-white/5 text-white/30">

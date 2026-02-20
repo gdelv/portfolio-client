@@ -6,7 +6,7 @@ export default function AboutSection() {
         className="absolute bottom-8 right-8 md:right-16 text-[8rem] md:text-[12rem] font-bold leading-none text-white/[0.03] select-none"
         style={{ fontFamily: 'Space Grotesk, sans-serif' }}
       >
-        02
+        01
       </div>
 
       {/* Decorative element */}
@@ -27,15 +27,11 @@ export default function AboutSection() {
             <div className="mt-6 flex items-start gap-4 reveal-left" style={{ transitionDelay: '0.15s' }}>
               <div className="w-10 h-[2px] bg-red-500 mt-3 flex-shrink-0" />
               <p className="text-white/60 leading-relaxed text-lg">
-                An NYC-based software engineer who enjoys taking on new challenges
-                and creating user friendly apps. When I am not coding you can find
-                me spending time with my twin girls or cooking up a new recipe in
-                the kitchen.
+                NYC-based Senior Full-Stack Engineer focused on AI-powered automation, commerce systems, and scalable web architecture.
               </p>
             </div>
             <p className="mt-6 ml-14 text-white/40 leading-relaxed reveal-left" style={{ transitionDelay: '0.3s' }}>
-              I have a passion for solving problems, learning new skills,
-              and improving existing ones.
+              I design and build high-performance applications that transform complex ideas into intuitive, production-grade products.
             </p>
             <a
               href="https://drive.google.com/file/d/10QnAWpwkyFLujv9Wm74F-8ll6H8P0PUc/view"
@@ -54,14 +50,14 @@ export default function AboutSection() {
               <img
                 src="/images/Gheadshot.jpeg"
                 alt="Giusseppe"
-                className="w-64 h-80 md:w-72 md:h-96 object-cover rounded-2xl"
+                className="w-32 h-40 md:w-72 md:h-96 object-cover rounded-2xl"
               />
               <div className="absolute -bottom-4 -right-4 md:-right-8">
                 <span
                   className="text-4xl md:text-5xl font-bold text-red-500/60"
                   style={{ fontFamily: 'Space Grotesk, sans-serif' }}
                 >
-                  CODE
+                  {/* CODE */}
                 </span>
               </div>
               {/* Border frame offset */}
