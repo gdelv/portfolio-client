@@ -1,0 +1,18 @@
+export const skills = [
+  'HTML',
+  'CSS',
+  'JavaScript',
+  'Node.js',
+  'React',
+  'React Native',
+  'Ruby',
+  'Ruby on Rails',
+  'PostgreSQL',
+  'Express.js',
+  'Sass',
+  'Bootstrap',
+  'Firebase',
+  'jQuery',
+  'MongoDB',
+  'Adobe XD',
+]

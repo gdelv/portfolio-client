@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import styled from 'styled-components';
 import Container from '../components/shared/Container';
@@ -22,14 +23,17 @@ height: 200px;
 border-radius: 5px;
 `;
 
-const About = () => (
-  <Container id="about">
-    <Header title="About" />
-    <AboutImage src={profile} alt="profile" />
-    <AboutContainer>
-      {splitText()}
-    </AboutContainer>
-  </Container>
-);
+const About = (props) => {
+  const { aboutRef } = props;
+  return (
+    <Container ref={aboutRef}>
+      <Header title="About" />
+      <AboutImage src={profile} alt="profile" />
+      <AboutContainer>
+        {splitText()}
+      </AboutContainer>
+    </Container>
+  );
+};
 
 export default About;

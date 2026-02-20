@@ -1,8 +1,10 @@
+/* eslint-disable react/prop-types */
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import logo from '../../images/gIcon.png';
 import Hamburger from './Hamburger';
 import { Primary } from '../../colors';
+import Button from './Button';
 
 const StyledNav = styled.nav`
     max-width: 100%;
@@ -44,13 +46,28 @@ const StyledLink = styled.a`
     transition: color .25s ease;
   }
 `;
-const NavBar = () => {
+const NavBar = (props) => {
+  console.log(props);
   const [buttonClassName, setButtonClassName] = useState('circle icon');
   const [modal, setModal] = useState(false);
+  const {
+    aboutRef, skillsRef, projectsRef, contactRef,
+  } = props;
   const changeClassName = () => (buttonClassName === 'circle icon' ? setButtonClassName('circle icon close') : setButtonClassName('circle icon'));
-  const handleModal = () => {
+  const scrollTo = (ref) => {
+    window.scroll({
+      top: ref.current.offsetTop,
+      behavior: 'smooth',
+    });
+  };
+  const handleHamburger = () => {
     changeClassName();
     setModal(!modal);
+  };
+  const handleModal = (ref) => {
+    changeClassName();
+    setModal(!modal);
+    scrollTo(ref);
   };
 
   const renderMainLinks = () => (
@@ -60,7 +77,7 @@ const NavBar = () => {
       </a>
       <Hamburger
         buttonClassName={buttonClassName}
-        handleModal={handleModal}
+        handleHamburger={handleHamburger}
       />
     </StyledNav>
   );
@@ -69,10 +86,15 @@ const NavBar = () => {
     if (modal) {
       return (
         <StyledModal>
-          <StyledLink href="#about" onClick={handleModal}>About</StyledLink>
+          <Button title="About" onClick={() => handleModal(aboutRef)} />
+          <Button title="Skills" onClick={() => handleModal(skillsRef)} />
+          <Button title="Projects" onClick={() => handleModal(projectsRef)} />
+          <Button title="Contact" onClick={() => handleModal(contactRef)} />
+
+          {/* <StyledLink href="#about" onClick={handleModal}>About</StyledLink>
           <StyledLink href="#skills" onClick={handleModal}>Skills</StyledLink>
           <StyledLink href="#projects" onClick={handleModal}>Projects</StyledLink>
-          <StyledLink href="#contact" onClick={handleModal}>Contact</StyledLink>
+          <StyledLink href="#contact" onClick={handleModal}>Contact</StyledLink> */}
         </StyledModal>
       );
     }
